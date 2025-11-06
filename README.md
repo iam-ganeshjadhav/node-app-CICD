@@ -37,10 +37,9 @@ GitHub → Jenkins Server → Deployment Server (Node.js + PM2)
 - **Jenkins Server:** Automates build, test, and deployment stages.  
 - **Deployment EC2:** Hosts the running Node.js application managed by PM2.
 
-<p align="center">
+
   ![a](IMG/8.png)
 
-</p>
 
 ---
 
@@ -84,7 +83,7 @@ PM2 ensures the app keeps running continuously even after reboots.
 - Commit and push the code to GitHub.
 
 
-![b](IMG/2.png)
+![c](IMG/2.png)
 
 
 ### 🔹 Step 4: Configure Jenkins Server
@@ -103,7 +102,7 @@ PM2 ensures the app keeps running continuously even after reboots.
 
 
 
-![b](IMG/3.png)
+![d](IMG/3.png)
 
 
 
@@ -114,7 +113,7 @@ PM2 ensures the app keeps running continuously even after reboots.
 4. Save the configuration.
 
 
-![b](IMG/4.png)
+![e](IMG/4.png)
 
 
 
@@ -127,7 +126,7 @@ PM2 ensures the app keeps running continuously even after reboots.
   - Deploy and start the Node.js app using PM2.
 
 
-![b](IMG/5.png)
+![f](IMG/5.png)
 
 
 
@@ -143,7 +142,7 @@ PM2 ensures the app keeps running continuously even after reboots.
 Now Jenkins will automatically build and deploy whenever new code is pushed!
 
 
-![b](IMG/6.png)
+![g](IMG/6.png)
 
 
 
@@ -169,7 +168,7 @@ Now Jenkins will automatically build and deploy whenever new code is pushed!
 4. PM2 ensures continuous uptime of the application.
 
 
-![b](IMG/7.png)
+![h](IMG/7.png)
 
 
 
