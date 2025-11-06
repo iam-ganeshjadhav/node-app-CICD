@@ -38,7 +38,8 @@ GitHub → Jenkins Server → Deployment Server (Node.js + PM2)
 - **Deployment EC2:** Hosts the running Node.js application managed by PM2.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/91388754/169044722-6b89486b-3b6f-4978-8a0f-30ac2c4e4c1f.png" alt="Architecture Diagram" width="600"/>
+  ![a](IMG/8.png)
+
 </p>
 
 ---
@@ -63,6 +64,11 @@ GitHub → Jenkins Server → Deployment Server (Node.js + PM2)
   - `Jenkins Server`
   - `Deployment Server`
 
+
+![b](IMG/1.png)
+
+
+
 ### 🔹 Step 2: Configure Deployment Server
 ```bash
 sudo apt update
@@ -76,6 +82,10 @@ PM2 ensures the app keeps running continuously even after reboots.
 - Create a new **GitHub repository**.
 - Add all your project files including `app.js` and `Jenkinsfile`.
 - Commit and push the code to GitHub.
+
+
+![b](IMG/2.png)
+
 
 ### 🔹 Step 4: Configure Jenkins Server
 1. Install Jenkins on another EC2 instance.  
@@ -91,11 +101,23 @@ PM2 ensures the app keeps running continuously even after reboots.
    - GitHub (if private)
    - Deployment server (SSH key)
 
+
+
+![b](IMG/3.png)
+
+
+
 ### 🔹 Step 5: Create Jenkins Pipeline
 1. Create a new **Pipeline job** in Jenkins.  
 2. Choose **"Pipeline script from SCM"**.  
 3. Enter your **GitHub repository URL**.  
 4. Save the configuration.
+
+
+![b](IMG/4.png)
+
+
+
 
 ### 🔹 Step 6: Run the Pipeline
 - Click **Build Now** in Jenkins.  
@@ -103,6 +125,11 @@ PM2 ensures the app keeps running continuously even after reboots.
   - Pull the latest code from GitHub.
   - SSH into the Deployment Server.
   - Deploy and start the Node.js app using PM2.
+
+
+![b](IMG/5.png)
+
+
 
 ### 🔹 Step 7: Add GitHub Webhook
 - Go to **GitHub → Settings → Webhooks → Add Webhook**
@@ -115,6 +142,11 @@ PM2 ensures the app keeps running continuously even after reboots.
 
 Now Jenkins will automatically build and deploy whenever new code is pushed!
 
+
+![b](IMG/6.png)
+
+
+
 ---
 
 ## 📂 Project Structure
@@ -124,7 +156,7 @@ Now Jenkins will automatically build and deploy whenever new code is pushed!
 ├── package.json
 ├── Jenkinsfile
 ├── README.md
-└── other source files
+└── IMG
 ```
 
 ---
@@ -135,6 +167,11 @@ Now Jenkins will automatically build and deploy whenever new code is pushed!
 2. Jenkins automatically triggers a build via webhook.  
 3. The Node.js app is deployed to the EC2 deployment server.  
 4. PM2 ensures continuous uptime of the application.
+
+
+![b](IMG/7.png)
+
+
 
 > 💡 Achieved a fully automated **end-to-end CI/CD process** using Jenkins and AWS.
 
